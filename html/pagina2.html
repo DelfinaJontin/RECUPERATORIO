@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Laurie Anderson: Repositorio de obras </title>
+    <link href="fuente" rel="stylesheet"> <!--FUENTE DE GOOGLE-->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Laurie Anderson</h1>
+            <p> Musica, arte experimental, multimedia y tecnologia</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html"> Inicio </a></li>
+                <li><a href="pagina2.html"> Biografia </a></li>
+                <li><a href="pagina3.html" class="activo">Repositorio de obras de Laurie Anderson </a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2> Repositorio de obras</h2>
+        <div class="instrucciones">
+            <p>
+                <span class="destacado"> Como fundiona? </span>
+                El sistema gestiona un repositorio de las obras de Laurie Anderson. 
+                Primero completa los datos generales, despues, podes las obras, una por una. 
+                Cuando las hayas cargado todas, va a apaerecer un boton para calcular 
+                el resultado. Una vez que hayas terminado,  podes utilizar el boton de 
+                "REINICIAR" para volver a empezar. 
+            </p>
+</div>
+<!--datos generales del repo-->
+<h3>Paso 1: Datos generales</h3>
+<div id="paso1">
+    <form id="form-config">
+        <div class="campo-formulario">
+            <label for="input-cantidad"> Cantidad de obras a cargar </label>
+            <input type="number" id="input-cantidad" min="1" required>
+        </div>
+        <div class="campo-formulario">
+            <label for="input-tiempo-mb"> tiempo de transferencia por MB:</label>
+            <input type="number" id="input-tiempo-mb" min="0" required>
+        </div>
+        <button type="button" id="btn-confirmar-config"> Confirmar datos generales </button>
+    </form>
+    <p id="mensaje-config" class="mensaje-error"></p>
+</div>
+<!--Carga de las obras-->
+<h3> Paso 2: Carga de obras </h3>
+<div id="paso2" style="display: none;">
+    <p id="mensaje-progreso"></p>
+    <form id="form-obras">
+        <div id="campo-formulario"></div>
+        <label for="input-nombre-obra">Nombre de la obra:</label>
+        <input type="text" id="input-nombre-obra" required>
+    </div>
+    <div class="campo-formulario">
+        <label for="input-tamano-obra">Tamaño de la obra (MB):</label>
+        <input type="number" id="input-tamano-obra" min="0" required>
+    </div>
+    <button type="button" id="btn-agregar-obra"> Agregar obra </button>
+</form>
+<p id="mensaje-obra" class="mensaje-error"></p>
+<ul id="lista-obras" class="lista-obras"></ul>
+</div>
+<!--Resultados-->
+<h3> Paso 3: Resultados </h3>
+<div id="paso3" style="display: none;">
+    <button type="button" id="btn-calcular"> Calcular resultado </button>
+    <div id="resultado">
+        <h4> Resultado </h4>
+        <p id="resultado-texto"></p>
+        <button type="button" id="btn-reiniciar" style="display: none;"> Reiniciar </button>
+    </div>
+</main>
+<footer>
+    <p>Pagina dedicada a Laurie Anderson.</p>
+</footer>
+<!--Script-->
+<script src="../js/pagina2.js"></script>
+</body>
+</html>
