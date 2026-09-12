@@ -5,7 +5,7 @@ body, header, nav, main, footer, div, ul, li, h1, h2,h3, h4, p, form, input, but
 }
 /*el body y el fondo*/
 body{
-   font-family: 'Abel', Arial, sans-serif;
+   font-family: 'Barlow', Arial, sans-serif;
    font-size: 1rem;
    color: #f2f2f2;
    background-image: url("../multimedia/anderson1.jpg");
@@ -184,7 +184,7 @@ main img {
 }
 /*botones de la pagina*/
 button {
-    font-family:'Abel', Arial, sans-serif;
+    font-family: 'Barlow', Arial, sans-serif;
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
     background-color: #1a6fa8;
