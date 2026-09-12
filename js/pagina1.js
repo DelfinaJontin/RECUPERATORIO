@@ -7,7 +7,7 @@ let obras = [
 ];
 let contenedorGaleria = document.querySelector("#galeria");
 //para saber si la galeria esta en diseño grande o no
-let diseñoGrande = false;
+let disenioGrande = false;
 function generarGaleria() {
     let i;
     let htmlGaleria = "";
@@ -25,8 +25,8 @@ function generarGaleria() {
 generarGaleria();
 //carga la galeria cuando carga la pagina
 //cambia el color y diseño
-let botonDiseño = document.querySelectorAll("#btn-cambiar-disenio");
-botonDiseño.addEventListener("click", function() {
+let botonDisenio = document.querySelector("#btn-cambiar-diseno");
+botonDisenio.addEventListener("click", function() {
     let listaDivsObra = document.querySelectorAll(".obra");
     let j;
     if(disenioGrande === false) {
