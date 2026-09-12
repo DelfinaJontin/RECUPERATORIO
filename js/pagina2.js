@@ -5,12 +5,13 @@ let costoPorMB =0;
 //obras cargadas ya 
 let obrasCargadas =0;
 
-let divPaso1 = document.querySelector("paso1");
-let divPaso2 = document.querySelector("paso2");
-let divPaso3 = document.querySelector("paso3");
+let divPaso1 = document.querySelector("#paso1");
+let divPaso2 = document.querySelector("#paso2");
+let divPaso3 = document.querySelector("#paso3");
 
 let inputCantidad = document.querySelector("#input-cantidad");
-let inputTiempoMB = document.querySelector("input-costo-MB");
+let inputTiempoMB = document.querySelector("#input-tiempo-mb");
+let inputCostomb = document.querySelector("#input-costo-mb");
 let btnConfirmarConfig = document.querySelector("#btn-confirmar-config");
 let mensajeConfig = document.querySelector("#mensaje-config");
 
@@ -30,12 +31,12 @@ let btnReiniciar = document.querySelector("#btn-reiniciar");
 btnConfirmarConfig.addEventListener("click", function () {
     let cantidadIngresada = Number(inputCantidad.value);
     let tiempoIngresado = Number(inputTiempoMB.value);
-    let costoIngresado = Number(inputCostoMB.value);
+    let costoIngresado = Number(inputCostomb.value);
     if (inputCantidad.value === "" || isNaN(cantidadIngresada) || cantidadIngresada <= 0) {
         mensajeConfig.innerText = "Ingresá una cantidad de obras válida (mayor a 0).";
     } else if (inputTiempoMB.value === "" || isNaN(tiempoIngresado) || tiempoIngresado <= 0) {
         mensajeConfig.innerText = "Ingresá un tiempo de transferencia por MB válido (mayor a 0).";
-    } else if (inputCostoMB.value === "" || isNaN(costoIngresado) || costoIngresado < 0) {
+    } else if (inputCostomb.value === "" || isNaN(costoIngresado) || costoIngresado < 0) {
         mensajeConfig.innerText = "Ingresá un costo de almacenamiento por MB válido.";
     } else {
         cantidadObras = cantidadIngresada;
@@ -147,7 +148,7 @@ btnReiniciar.addEventListener("click", function () {
 
     inputCantidad.value = "";
     inputTiempoMB.value = "";
-    inputCostoMB.value = "";
+    inputCostomb.value = "";
     inputNombreObra.value = "";
     inputDuracionObra.value = "";
     inputPesoObra.value = "";
@@ -164,4 +165,3 @@ btnReiniciar.addEventListener("click", function () {
     btnCalcular.style.display = "block";
     btnReiniciar.style.display = "none";
 });
-
