@@ -12,6 +12,7 @@ body{
    background-repeat: no-repeat;
    background-position: center;
    background-attachment: fixed;
+   background-size: cover;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -103,6 +104,10 @@ main ol {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.columnas-3 img {
+    max-width: 100%;
+    height: auto;
 }
 .columnas-3 article {
     flex-grow: 1;
