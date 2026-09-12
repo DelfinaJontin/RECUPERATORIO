@@ -2,7 +2,7 @@ let obras = [
 {imagen:"../multimedia/bigsience.webp", nombre: "Big Science", anio:1982},
 {imagen:"../multimedia/OSuperman.webp", nombre: "O Superman", anio:1981},
 {imagen:"../multimedia/misterheartbreak.webp", nombre: "Mister Heartbreak", anio:1984},
-{imagen:"./multimedia/HomeoftheBrave.webp", nombre: "Hom of the Brave", anio:1986},
+{imagen:"../multimedia/HomeoftheBrave.webp", nombre: "Hom of the Brave", anio:1986},
 {imagen:"../multimedia/strangeAngels.webp", nombre: "Strange Angels", anio:1989}
 ];
 let contenedorGaleria = document.querySelector("#galeria");
@@ -13,7 +13,7 @@ function generarGaleria() {
     let htmlGaleria = "";
     for (i = 0; i < obras.length; i++) {
         htmlGaleria +="<div class='obra'>";
-        htmlGaleria +="img src='" + obras [i].imagen + "'alt ='" + obras[i].nombre + "'>";
+        htmlGaleria += "<img src='" + obras[i].imagen + "' alt='" + obras[i].nombre + "'>";
         htmlGaleria += "<h4>" + obras[i].nombre + "<h4>";
         htmlGaleria +="<p>Año: "+obras[i].anio + "</p>";
         htmlGaleria += "</div>"
